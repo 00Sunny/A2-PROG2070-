@@ -14,15 +14,7 @@ namespace Assignment2_Test
         //For GetLength Method
         [Test]
         public void InvalidRectangle_GetLength_Zero()
-        {
-            //Arrange
-            //int firstAngle = 50;
-            //int secondAngle = 50;
-            //int thirdAngle = 70;
-            //string expected = "The triangle is valid."; //Act
-            //string actual = Rectangle.ValidTriangle(firstAngle, secondAngle, thirdAngle); //Assert
-            //Assert.AreEqual(expected, actual);
-            
+        {   
             int length = 0;
             int width = 30;
 
