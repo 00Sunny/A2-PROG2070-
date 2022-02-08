@@ -57,8 +57,9 @@ namespace NUnitDemonstration
                 Console.WriteLine("Please enter one of 7 options: ");
                 optionNumber = Console.ReadLine();
 
-                
 
+                bool checkForLength = true;
+                bool checkForWidth = true;
                 switch (optionNumber)
                 {
                     case "1":
@@ -66,16 +67,39 @@ namespace NUnitDemonstration
                         break;
                     case "2":
                         Console.Write("Please enter a new length of rectangle: ");
-                        lengthValue = int.Parse(Console.ReadLine());                      
-                        Console.WriteLine("It has been changed to " + rectangle.SetLength(lengthValue));
+                        do
+                        {
+                            
+                            if (!int.TryParse(Console.ReadLine(), out lengthValue) || lengthValue <= 0)
+                            {
+                                Console.WriteLine("It's invalid! It must be an integer greater than Zero.\nPlease try it again.");
+                                checkForLength = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("It has been changed to " + rectangle.SetLength(lengthValue));
+                                checkForLength = true;
+                            }
+                        } while (!checkForLength);                                    
                         break;
                     case "3":
                         Console.WriteLine("The width of rectangle is " + rectangle.GetWidth());
                         break;
                     case "4":
                         Console.Write("Please enter a new length of rectangle: ");
-                        widthValue = int.Parse(Console.ReadLine());
-                        Console.WriteLine("It has been changed to " + rectangle.SetWidth(widthValue));               
+                        do
+                        {
+                            if (!int.TryParse(Console.ReadLine(), out widthValue) || widthValue <= 0)
+                            {
+                                Console.WriteLine("It's invalid! It must be an integer greater than Zero.\nPlease try it again.");
+                                checkForWidth = false;
+                            }
+                            else
+                            {
+                                Console.WriteLine("It has been changed to " + rectangle.SetWidth(widthValue));
+                                checkForWidth = true;
+                            }
+                        } while (!checkForWidth);                                                    
                         break;
                     case "5":
                         Console.WriteLine("The perimeter of rectangle is " + rectangle.GetPerimeter());

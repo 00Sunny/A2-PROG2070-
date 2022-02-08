@@ -24,7 +24,7 @@ namespace NUnitDemonstration
         }
 
         public int GetLength()
-        {
+        {            
             return length;
         }
 
@@ -53,6 +53,117 @@ namespace NUnitDemonstration
         public int GetArea()
         {
             return length * width;
+        }
+
+        public string TestGetLength()
+        {
+            string result = "";
+            if (length == 0)
+            {
+                result = "The length is NOT valid.";
+            }
+            else if(length < 0)
+            {
+                result = "The length is NOT valid.";
+            }
+            else
+            {
+                result = "The length is valid.";
+            }
+            return result;
+        }
+
+        public string TestSetLength(int inputLength)
+        {
+            this.length = inputLength;
+            string result = "";
+            if (length == 0)
+            {
+                result = "The length is NOT valid.";
+            }
+            else if (length < 0)
+            {
+                result = "The length is NOT valid.";
+            }
+            else
+            {
+                result = "The length is valid.";
+            }
+            return result;
+        }
+
+        public string TestGetWidth()
+        {
+            string result = "";
+            if (width == 0)
+            {
+                result = "The width is NOT valid.";
+            }
+            else if (width < 0)
+            {
+                result = "The width is NOT valid.";
+            }
+            else
+            {
+                result = "The width is valid.";
+            }
+            return result;
+        }
+
+        public string TestSetWidth(int inputWidth)
+        {
+            this.width = inputWidth;
+            string result = "";
+            if (width == 0)
+            {
+                result = "The width is NOT valid.";
+            }
+            else if (width < 0)
+            {
+                result = "The width is NOT valid.";
+            }
+            else
+            {
+                result = "The width is valid.";
+            }
+            return result;
+        }
+
+        public string TestGetPerimeter()
+        {
+            string result = "";
+            if(2 * length + 2 * width == 2)
+            {
+                result = "The perimeter is NOT valid.";
+            }
+            else if(2 * length + 2 * width < 2)
+            {
+                result = "The perimeter is NOT valid.";
+            }
+            else
+            {
+                result = "The perimeter is valid.";
+            }
+            return result;
+        }
+
+        public string TestGetArea()
+        {
+            string result = "";
+            if(length * width == 0)
+            {
+                result = "The area is NOT valid.";
+            }
+            else if (length * width < 0)
+            {
+                result = "The area is NOT valid.";
+            }
+            else
+            {
+                result = "The area is valid.";
+            }
+
+            return result;
         }
 
     }

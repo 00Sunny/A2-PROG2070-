@@ -13,3 +13,4 @@ C:\PROG2070\A2\UnitTest_Rectangle\NUnitTesting\obj\Debug\Assignment2.csproj.Core
 C:\PROG2070\A2\UnitTest_Rectangle\NUnitTesting\obj\Debug\Assignment2.csproj.CopyComplete
 C:\PROG2070\A2\UnitTest_Rectangle\NUnitTesting\obj\Debug\NUnitTesting.exe
 C:\PROG2070\A2\UnitTest_Rectangle\NUnitTesting\obj\Debug\NUnitTesting.pdb
+C:\PROG2070\A2\UnitTest_Rectangle\NUnitTesting\obj\Debug\Assignment2.csproj.AssemblyReference.cache
